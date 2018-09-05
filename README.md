@@ -1,2 +1,2 @@
 # Informatica-5
-Repository voor oefeningen Python in 5WWI
+Repository voor oefeningen Python in 5WWI2
