@@ -17,5 +17,5 @@ over = int((minutenVriendinVertrek + reisMinuut) / 60)
 correctUur = int(urenVriendinVertrek + reisUur + over)
 correctMinuut = (minutenVriendinVertrek + reisMinuut) % 60
 
-print(minutenVriendinVertrek) #WTF
+print(correctUur)
 print(correctMinuut)
