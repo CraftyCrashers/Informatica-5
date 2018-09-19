@@ -7,7 +7,7 @@ TC /= 7
 TC += 10
 uitvoer1 = 'temperatuur (Fahrenheit): '
 uitvoer1 += str(TF)
-uitvoer2 = 'temperatuur (Celcius): '
+uitvoer2 = 'temperatuur (Celsius): '
 uitvoer2 += str(TC)
 print(uitvoer1)
 print(uitvoer2)
