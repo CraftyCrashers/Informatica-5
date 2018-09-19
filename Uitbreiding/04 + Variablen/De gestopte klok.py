@@ -13,7 +13,7 @@ reisTijd = (totaalTijd - lunchTijd) / 2
 reisUur = int(reisTijd / 60)
 reis1 = reisTijd % 60
 reisMinuut = int(reis1)
-over = int((urenVriendinVertrek + reisUur) / 60)
+over = int((minutenVriendinVertrek + reisMinuut) / 60)
 correctUur = int(urenVriendinVertrek + reisUur + over)
 correctMinuut = (minutenVriendinVertrek + reisMinuut) % 60
 
