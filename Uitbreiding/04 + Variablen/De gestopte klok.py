@@ -7,14 +7,29 @@ minutenVriendinVertrek = int(input('In welk minuut vertrekt Andrea terug naar hu
 urenAndreaAankomst = int(input('In welk uur arriveert Andrea terug thuis?'))
 minutenAndreaAankomst = int(input('In welk minuut arriveert Andrea terug thuis?'))
 
-lunchTijd = (urenVriendinVertrek - urenVriendinAankomst) * 60 + (minutenVriendinVertrek - minutenVriendinAankomst)
-totaalTijd = ((urenVriendinAankomst - urenAndreaVertrek) + (urenVriendinVertrek - urenAndreaAankomst)) * 60 + ((minutenVriendinAankomst - minutenAndreaVertrek) + (minutenVriendinVertrek - minutenAndreaAankomst)) + lunchTijd
-reisTijd = (totaalTijd / lunchTijd) / 2 #Heen OF weer
-reisTijdUur = int(reisTijd / 1)
-reis1 = int(reisTijd % 1)
-reisTijdMinuut = int(reis1 / 1)
+lunchTijd = (urenVriendinVertrek * 60 + minutenVriendinVertrek) - (urenVriendinAankomst * 60 + minutenVriendinAankomst)
+totaalTijd = (urenAndreaAankomst * 60 + minutenAndreaAankomst) - (urenAndreaVertrek * 60 + minutenAndreaVertrek)
+reisTijd = (totaalTijd - lunchTijd) / 2
+reisUur = int(reisTijd / 60)
+reis1 = reisTijd % 60
+reisMinuut = int(reis1)
+over = int((urenVriendinVertrek + reisUur) / 60)
+correctUur = int(urenVriendinVertrek + reisUur + over)
+correctMinuut = (minutenVriendinVertrek + reisMinuut) % 60
 
-correctUur = urenVriendinVertrek + reisTijdUur
-correctMinuut = minutenVriendinVertrek + reisTijdMinuut
+print(lunchTijd)
+print(totaalTijd)
+print(reisTijd)
+print(reisUur)
+print(reisMinuut)
+print(over)
 print(correctUur)
 print(correctMinuut)
+6
+32
+14
+14
+17
+21
+13
+29
