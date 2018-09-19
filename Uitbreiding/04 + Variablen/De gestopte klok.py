@@ -23,12 +23,3 @@ correctMinuut = (minutenVriendinVertrek + reisMinuut) % 60
 
 print(correctUur)
 print(correctMinuut)
-
-15
-1
-17
-5
-18
-1
-18
-23
