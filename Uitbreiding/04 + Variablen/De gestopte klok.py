@@ -17,19 +17,5 @@ over = int((minutenVriendinVertrek + reisMinuut) / 60)
 correctUur = int(urenVriendinVertrek + reisUur + over)
 correctMinuut = (minutenVriendinVertrek + reisMinuut) % 60
 
-print(lunchTijd)
-print(totaalTijd)
-print(reisTijd)
-print(reisUur)
-print(reisMinuut)
-print(over)
-print(correctUur)
+print(minutenVriendinVertrek) #WTF
 print(correctMinuut)
-6
-32
-14
-14
-17
-21
-13
-29
