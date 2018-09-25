@@ -4,10 +4,16 @@ c = float(input('Hoeveel graan in kubieke meter per hectare?'))
 r = float(input('Wat is de straal van de graansilo?'))
 h = float(input('Wat is de hoogte van de graansilo?'))
 
-aantalGraan = ((b * l) / (10 ** 4)) * c
-capaciteitSilo = r * r * h * 3.1415926535897931
+hectare = (b * l) * (10 ** -4)
+aantalGraan = c
+aantalGraan *= hectare
+capaciteitSilo = 3.1415926535897931
+capaciteitSilo *= r
+capaciteitSilo *= r
+capaciteitSilo *= h
 voldoendeSilo = int(aantalGraan / capaciteitSilo)
-overigGraan = (aantalGraan % capaciteitSilo) / capaciteitSilo
+overigGraan = (aantalGraan % capaciteitSilo)
+overigGraan /= capaciteitSilo
 overigGraan *= h
 
 print(voldoendeSilo)
