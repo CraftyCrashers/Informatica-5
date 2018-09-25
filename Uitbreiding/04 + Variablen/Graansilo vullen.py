@@ -11,3 +11,4 @@ overigGraan = (aantalGraan / capaciteitSilo) % h
 
 print(voldoendeSilo)
 print(overigGraan)
+
