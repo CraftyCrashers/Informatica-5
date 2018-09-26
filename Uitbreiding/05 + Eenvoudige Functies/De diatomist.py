@@ -9,4 +9,4 @@ n = int(0.83*((R * R) / (r * r)) - 1.9)
 bedekkingsgraad = ((r * r * n) / (R * R) * 100)
 
 #Uitvoer
-print(str(n) + ' kleine cirkels bedekken ' + str(float(round(bedekkingsgraad, 2))) +'% van de grote cirkel')
+print('{:.0f} kleine cirkels bedekken {:.2f}% van de grote cirkel'.format(n, bedekkingsgraad))
