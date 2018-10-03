@@ -1,4 +1,4 @@
-# Invoer
+# Invoer windsnelheid
 x = int(input('Wat is de windsnelheid?'))
 
 # Schaal
