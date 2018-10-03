@@ -8,4 +8,4 @@ b = float(input('Geef de breedte van het driehoek'))
 s = vierkantswortel(l ** 2 + b ** 2)
 
 #Uitvoer
-print('In een rechthoekige driekhoek met rechthoekzijden a = {:.2f} en b = {:.2f} is de schuine zijde {:.2f}'.format(l, b, s))
+print('In een rechthoekige driehoek met rechthoekzijden a = {:.2f} en b = {:.2f} is de schuine zijde {:.2f}'.format(l, b, s))
