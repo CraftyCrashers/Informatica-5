@@ -10,10 +10,11 @@ A1 = max(a1, a2, a3)
 if A1 == a1:
     a1 = 0
     A2 = max(a2, a3)
-elif max(a2, a3) == a2:
-    A2 = a2
+elif max(a1, a2, a3) == a2:
+    a2 = 0
+    A2 = max(a1, a3)
 else:
-    A2 = a3
+    A2 = max(a1, a2)
 V1 = max(v1, v2)
 V2 = min(v1, v2)
 
