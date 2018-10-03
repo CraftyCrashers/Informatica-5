@@ -1,8 +1,8 @@
-#Invoer voor 2 termen
+# Invoer voor 2 termen
 x = float(input('Eerste term'))
 y = float(input('Tweede term'))
 
-#Uitkomst som van 2 termen
+# Uitkomst som van 2 termen
 z = x + y
 
 print('{:>6.0f} + {:<6.0f} = {:.0f}'.format(x, y, z))
