@@ -1,4 +1,5 @@
 # invoer
+# Bij vader print 'Krokodil geeft kind terug', krokodil print 'Krokodil eet kind op'
 x = input('Wie heeft stalen zenuwen?')
 
 # Booleans en uitvoer
