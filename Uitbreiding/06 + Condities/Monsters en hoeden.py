@@ -12,13 +12,13 @@ wit = 'wit'
 # Puzzelwerk
 
 if kleurBlind == 1 and p2 == zwart:
-    p2 = wit
-elif kleurBlind == 1 and p2 == wit:
-    p2 = zwart
-elif kleurBlind == 2 and p1 == zwart:
     p1 = wit
-else:
+elif kleurBlind == 1 and p2 == wit:
     p1 = zwart
+elif kleurBlind == 2 and p1 == zwart:
+    p2 = wit
+else:
+    p2 = zwart
 
 #Wat zegt de mannen
 
