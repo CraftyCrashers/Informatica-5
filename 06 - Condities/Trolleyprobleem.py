@@ -11,5 +11,5 @@ if x == 'ja':
 elif x == 'nee':
     if y == 'ja':
         print(1)
-    elif y == 'nee':
+    else:
         print(5)
