@@ -9,7 +9,7 @@ while nummer != 0 and totaal < 21:
 # Resultaat
 
 if totaal == 21:
-    print('Gewonnnen!')
+    print('Gewonnen!')
 elif totaal > 21:
     print('Verbrand ({})'.format(totaal))
 else:
