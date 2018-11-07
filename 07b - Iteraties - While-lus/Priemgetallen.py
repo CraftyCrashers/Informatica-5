@@ -14,3 +14,7 @@ if getal == deler:
     print(str(getal) + ' is een priemgetal')
 else:
     print(str(getal) + ' is geen priemgetal')
+
+# Beter oplossing
+# while getal % deler != 0:
+#   i +=
