@@ -18,4 +18,4 @@ else:
 # Beter oplossing
 # while getal % deler != 0:
 #   i +=
-# for i != getal // deler + 1
+# for i < getal // deler + 1
