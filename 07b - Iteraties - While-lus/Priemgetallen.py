@@ -5,7 +5,7 @@ getal = int(input('Geef een getal.: '))
 # Format
 
 deler = 2
-while getal / deler != getal // deler and getal != 0 and getal != 1:
+while getal / deler != getal // deler and getal != 1:
     deler += 1
 
 # Uitvoer
