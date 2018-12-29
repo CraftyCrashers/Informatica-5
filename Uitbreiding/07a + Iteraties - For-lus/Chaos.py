@@ -6,6 +6,6 @@ s = int(input('Aantal tijdstappen?: '))
 
 # Format
 
-formule = r * d * (1 - d)
 for i in range(s):
-    print(i * formule)
+    print(d)
+    d = r * d * (1 - d)
