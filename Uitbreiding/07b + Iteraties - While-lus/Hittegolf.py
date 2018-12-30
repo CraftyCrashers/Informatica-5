@@ -21,3 +21,5 @@ while x == 'stop' and X != 'stop':
 
 # Uitvoer
 print(aanwezigheid)
+
+# FREAKING FINALLY
