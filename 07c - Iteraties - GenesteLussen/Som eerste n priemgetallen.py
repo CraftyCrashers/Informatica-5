@@ -8,13 +8,10 @@ while huidigAantalPriemgetal < n:
         if huidigPriemgetal / huidigDeler == huidigPriemgetal // huidigDeler and huidigPriemgetal != huidigDeler:
             huidigDeler += huidigPriemgetal
         elif huidigDeler >= huidigPriemgetal // 2:
-            huidigAantalPriemgetal += 1
-            somPriemgetallen += huidigPriemgetal
-            huidigDeler += huidigPriemgetal
+            huidigAantalPriemgetal, somPriemgetallen, huidigDeler = huidigAantalPriemgetal + 1, somPriemgetallen + huidigPriemgetal, huidigDeler + huidigPriemgetal
         else:
             huidigDeler += 1
-    huidigPriemgetal += 2
-    huidigDeler = 2
+    huidigPriemgetal, huidigDeler = huidigPriemgetal + 2, 3
 
 # Output
 print(somPriemgetallen)
