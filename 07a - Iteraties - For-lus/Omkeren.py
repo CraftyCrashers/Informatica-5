@@ -1,8 +1,8 @@
 # Invoer
-
 woord = input('Geef een woord: ')
-# Format
 
-for i in range(len(woord)):
-    i = woord
-    print(i)
+# Format
+x = ''
+for i in woord[::-1]:
+    x += i
+print(x)
