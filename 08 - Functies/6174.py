@@ -1,31 +1,30 @@
 def splits(a):
-    x, y, a = '', 0, str(a)
-    for i in a:
-        if y != len(a) - 1:
-            x, y = x + i + ', ', y + 1
-        else:
-            x += i
-    return x
+    x = a // 1000
+    y = (a // 100) % 10
+    z = (a // 10) % 10
+    u = a % 10
+    return x, y, z, u
 
 
 def oplopende_cijfers(a, b, c, d):
+    x2, x3 = 0, 10
     x1 = min(a, b, c, d)
     x4 = max(a, b, c, d)
-    if a == x1 or a == x4:
-        a = 0
-    if b == x1 or b == x4:
-        b = 0
-    if c == x1 or c == x4:
-        c = 0
-    if d == x1 or d == x4:
-        d = 0
-    x2 = min(a, b, c, d)
-    x3 = max(a, b, c, d)
-    return '({}, {}, {}, {})'.format(x1, x2, x3, x4)
+    for i in a, b, c, d:
+        if x1 < i < x4 and i < x3 and x2 == 0:
+            x2 = i
+        elif x1 < i < x4 and i < x2:
+            x3 = x2
+            x2 = i
+        elif x1 < i < x4 and i > x2:
+            x3 = i
+    return x1, x2, x3, x4
 
 
 def op_af_getallen(a, b, c, d):
-    return"('{}{}{}{}', '{}{}{}{}')".format(a, b, c, d, d, c, b, a)
+    x1 = a * 1000 + b * 100 + c * 10 + d
+    x2 = d * 1000 + c * 100 + b * 10 + a
+    return x1, x2
 
 
 def verschil(a, b):
@@ -34,10 +33,11 @@ def verschil(a, b):
 
 
 def kaprekar(a):
-    b = oplopende_cijfers(splits(a))
-    c = op_af_getallen(splits(b))
-    grootste, kleinste = max(b, c), min(b, c)
-    return '{} - {} = {}'.format(grootste, kleinste, verschil(max, min))
+    x1 ,x2, x3, x4 = splits(a)
+    x1, x2, x3, x4 = oplopende_cijfers(x1, x2, x3, x4)
+    kleinste, grootste = op_af_getallen(x1, x2, x3, x4)
+    a = verschil(grootste, kleinste)
+    return'{} - {} = {}\n'.format(grootste, kleinste, a)
 
 
-print(kaprekar(2741))
+print(kaprekar(5342))
