@@ -1,4 +1,5 @@
 def is_letter(a):
+    a = str(a)
     a = ord(a)
     a = bool(64 < a < 91 or 96 < a < 123)
     return a
