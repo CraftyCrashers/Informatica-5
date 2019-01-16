@@ -15,3 +15,10 @@ def langste_zin(a):
         maximaal_aantal_woorden = max(huidig_aantal_woorden, maximaal_aantal_woorden)
         a = a[huidig_positie_punt + 2:]
     return maximaal_aantal_woorden
+
+
+# Andere optie
+def tel_woorden_ander_optie(zin):
+    lengte = len(zin)
+    lengte_zonder_spaties = len(zin.replace(' ', ''))
+    return lengte - lengte_zonder_spaties + 1
