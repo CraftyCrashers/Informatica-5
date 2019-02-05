@@ -1,7 +1,7 @@
 def fruitstuk_toevoegen(mand, additie):
     i = 0
     while len(additie) > len(mand[i]) and mand[i] != mand[-1]:
-        i = i + 1
+        i += 1
     if len(additie) > len(mand[i]):
         mand.append(additie)
     elif len(additie) == len(mand[i]):
