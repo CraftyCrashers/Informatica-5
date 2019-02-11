@@ -1,4 +1,3 @@
-#G 71 R 82 Y 89
 def volgende_rij(a):
     nieuw_rij = []
     for i in range(1, len(a)):
@@ -17,6 +16,15 @@ def volgende_rij(a):
 def driehoek(a):
     geen_VISUALISATIE = [a]
     for i in range(len(a) - 1):
-        geen_VISUALISATIE = volgende_rij(geen_VISUALISATIE)
-        a += geen_VISUALISATIE
-    return a
+        a = volgende_rij(a)
+        geen_VISUALISATIE.extend([a])
+    return geen_VISUALISATIE
+
+
+def kleuren(a):
+    groen, rood, geel = 0, 0, 0
+    for i in a:
+        groen += i.count('G')
+        rood += i.count('R')
+        geel += i.count('Y')
+    return groen, rood, geel
