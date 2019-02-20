@@ -1,5 +1,11 @@
 def versleutel_woord(woord, aantal):
-    for i in range(len(woord)):
-        woord = woord[:i] + chr(ord(woord[i].upper()) + aantal) + woord[i + 1:]
-    return woord
-print(versleutel_woord('van', 14))
+    resultaat = ''
+    for i in woord:
+        resultaat += chr(ord(i.upper()) + aantal)
+    return resultaat
+
+
+def versleutel_zin(zin, aantal):
+    zin = versleutel_woord(zin, aantal)
+    zin = zin.replace('@', ' ').replace(chr(32 + aantal), '@')
+    return zin
