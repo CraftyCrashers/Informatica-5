@@ -1,7 +1,9 @@
 Belangrijk:
-Bij indienen van het wedstrijd in PyCharm, hernoem de extentie van .py naar .p3
+Bij indienen van het wedstrijd in PyCharm, hernoem de extentie van .py naar .py3
 
 Tips:
 import sys, io
-variabel = open('C:\data\\python\input.txt')
+variabel = open('C:\Gebruikers\\24910\\Bureaublad\\input.txt')
+variabel = open('C:\Gebruikers\\24910\\Bureaublad\\output.txt', 'w')
 sys.stdin = variabel
+sys.stdout = variabel
