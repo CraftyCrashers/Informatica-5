@@ -1,0 +1,7 @@
+Belangrijk:
+Bij indienen van het wedstrijd in PyCharm, hernoem de extentie van .py naar .p3
+
+Tips:
+import sys, io
+variabel = open('C:\data\\python\input.txt')
+sys.stdin = variabel

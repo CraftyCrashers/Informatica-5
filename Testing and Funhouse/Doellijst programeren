@@ -4,8 +4,3 @@ Doellijst :
     Maak een functie voor controle op vier op een rij.
 -Maak een programma voor herleiding canonieke matrix.
 -Bestudeer self joints en maak oefeningen ervan.
-
-Tips:
-import sys, io
-variabel = open('C:\data\\python\input.txt')
-sys.stdin = variabel
