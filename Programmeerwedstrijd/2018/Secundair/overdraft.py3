@@ -1,10 +1,3 @@
-import sys
-import io
-inp = open('C:\data\\input.txt')
-out = open('C:\data\\output.txt', 'w')
-sys.stdin = inp
-sys.stdout = out
-
 aantal = int(input())
 for i in range(aantal):
     saldo = int(input())
