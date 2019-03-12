@@ -8,3 +8,5 @@ inp = open('C:\data\\input.txt')
 out = open('C:\data\\output.txt', 'w')
 sys.stdin = inp
 sys.stdout = out
+
+lijst2 = lijst[:]
