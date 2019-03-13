@@ -9,4 +9,4 @@ out = open('C:\data\\output.txt', 'w')
 sys.stdin = inp
 sys.stdout = out
 
-lijst2 = lijst[:]
+Om een nieuwe lijst te creëren van een andere lijst. Gebruik list(tuple(variabel_lijst))
