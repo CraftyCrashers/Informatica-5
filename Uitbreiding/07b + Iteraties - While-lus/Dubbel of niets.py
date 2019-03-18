@@ -1,23 +1,24 @@
 # Format
-verificatie = 0
+verificatie, inzet = 0, 0
 kapitaal = int(input('Huidige bedrag?: '))
-while kapitaal != 'stop':
+while verificatie == 0:
     inzet = input('Hoeveel inzet?: ')
-    if inzet != 'stop':
+    if inzet == 'stop' and verificatie == 0:
         verificatie = 2
-    elif inzet != 'alles':
+    elif inzet != 'alles' and verificatie == 0:
         inzet = int(inzet)
         if inzet > kapitaal:
             verificatie = 1
-    else:
+    elif verificatie == 0:
         inzet = kapitaal
-    kapitaal -= inzet
-    kleur = input('Zwart of wit?: ')
-    showdown = input('Resultaat: ')
-    if kleur == showdown and verificatie == 0:
-        kapitaal += inzet * 2
+    if verificatie == 0:
+        kapitaal -= int(inzet)
+        kleur = input('Zwart of wit?: ')
+        showdown = input('Resultaat: ')
+        if kleur == showdown:
+            kapitaal += inzet * 2
 
-if verificatie == 1:
-    print('Je kunt geen {} dollar inzetten als je maar {} dollar hebt.'.format(inzet, kapitaal))
+if verificatie == 1 and kapitaal != 0:
+    print('Je kunt geen {} dollar inzetten als je maar {} dollar hebt.'.format(str(inzet), str(kapitaal)))
 else:
-    print('Je eindigt met '+ kapitaal +' dollar.')
+    print('Je eindigt met ' + str(kapitaal) + ' dollar.')
