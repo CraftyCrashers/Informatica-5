@@ -11,9 +11,8 @@ def boot_toevoegen(set1, set2):
 
 
 def vuur(string, set_):
-    waarde, string = False, set([string])
-    if string.isdisjoint(set_):
+    check = False
+    if string in set_:
         set_.remove(string)
-        waarde = True
-    return waarde, set_
-print(vuur('I7',{'E4', 'H8', 'I8', 'A2', 'G8', 'D4', 'C4', 'F8'}))
+        check = True
+    return check, set_
