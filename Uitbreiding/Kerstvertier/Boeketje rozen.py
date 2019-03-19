@@ -1,8 +1,14 @@
-# Info invoer: 1. # rode en witte rozen
-#              2. # blauwe en witte rozen
-#              3. # blauwe en rode rozen > / < # witte en blauwe roze
-# Info Uitvoer: 1. # Blauwe rozen, 2. # Witte rozen, 3. # Rode rozen
-# Voorbeeld:
-# 100 # rode en witte rozen
-# 53 # blauwe en witte rozen
-# < # blauwe en rode rozen kleiner dan # witte en blauwe roze
+rood_wit = int(input("Aantal rode en witte rozen: "))
+blauw_wit = int(input("Aantal blauwe en witte rozen: "))
+operator = input("rood groter/kleiner dan wit")
+if blauw_wit - 2 + blauw_wit - 4 == rood_wit:
+    blauw, wit, rood = 2, blauw_wit - 2, blauw_wit - 4
+elif operator == '<':
+    blauw, wit, rood = blauw_wit - rood_wit + 2, rood_wit - 2, 2
+elif rood_wit > blauw_wit:
+    blauw, wit, rood = rood_wit - 2, 2, blauw_wit - 2
+else:
+    blauw, wit, rood = blauw_wit - 2, 2, rood_wit - 2
+print(blauw)
+print(wit)
+print(rood)
