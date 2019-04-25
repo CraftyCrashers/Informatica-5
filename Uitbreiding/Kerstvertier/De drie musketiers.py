@@ -3,9 +3,16 @@ def is_letter(a):
     a = bool(64 < a < 91 or 96 < a < 123)
     return a
 
-def readable(a):
-    ord_a = ord(a)
-    b = bool(is_letter(a) or a in "!.?,':;0123456789()èàçéùµëöüäïâêîôû")
+
+def decodeer(message, positie1, positie2):
+    if is_letter(positie1):
+        message += positie2.upper()
+    elif positie1 in "0123456789":
+        message += positie2.lower()
+    else:
+        message += positie2
+    return message
+
 
 aantal_regels = int(input("Aantal Regels: "))
 code = []
@@ -21,12 +28,7 @@ if aantal_regels > 1 and lengte > 2:
     check = False
     for i in code[0][1:]:
         if i == positie1 == code[1][sub]:
-            if is_letter(i):
-                message += positie2.upper()
-            elif i in "0123456789":
-                message += positie2.lower()
-            else:
-                message += positie2
+            message = decodeer(message, positie1, positie2)
         sub += 1
         positie1, positie2 = positie2, i
 
@@ -39,12 +41,7 @@ if aantal_regels > 1 and lengte > 2:
         positie_boven = code[i - 1][1]
         sub = code[i][1]
         if code[i - 1][0] == code[i + 1][0] == sub:
-            if is_letter(sub):
-                message += positie2.upper()
-            elif sub in "0123456789":
-                message += positie2.lower()
-            else:
-                message += positie2
+            message = decodeer(message, sub, positie2)
         sub = 0
         for j in code[i][1:]:
             if (j == positie1 and (j == positie_boven or j == positie_onder)) or \
@@ -66,12 +63,7 @@ if aantal_regels > 1 and lengte > 2:
             sub += 1
             positie1, positie2, positie_onder, positie_boven = positie2, j, code[i + 1][sub], code[i - 1][sub]
         if positie1 == positie_onder == positie_boven:
-            if is_letter(positie1):
-                message += positie2.upper()
-            elif positie1 in "0123456789":
-                message += positie2.lower()
-            else:
-                message += positie2
+            message = decodeer(message, positie1, positie2)
 
 
 if aantal_regels > 1 and lengte > 2:
@@ -80,12 +72,7 @@ if aantal_regels > 1 and lengte > 2:
     sub = 0
     for i in code[-1][1:]:
         if i == positie1 == code[-2][sub]:
-            if is_letter(i):
-                message += positie2.upper()
-            elif i in "0123456789":
-                message += positie2.lower()
-            else:
-                message += positie2
+            message = decodeer(message, positie1, positie2)
         sub += 1
         positie1, positie2 = positie2, i
 
