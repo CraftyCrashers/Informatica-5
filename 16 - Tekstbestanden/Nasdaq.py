@@ -28,7 +28,6 @@ def selecteer_kolom(criteria, file):
     else:
         for i in content:
             resultaat.append(round(just_for_this(float(i[index])), 2))
-    resultaat.pop(-1)
     return resultaat
 
 
